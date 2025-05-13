@@ -15,7 +15,7 @@ const PAGE_ID = process.env.PAGE_ID;
 const ACCESS_TOKEN = process.env.ACCESS_TOKEN;
 
 // Enable CORS for your frontend's origin
-app.use(cors({ origin: 'https://wizardy-ai-mcp.vercel.app:443' }));
+app.use(cors({ origin: 'https://wizardy-ai-mcp.vercel.app' }));
 
 // Middleware to parse JSON bodies
 app.use(express.json());
