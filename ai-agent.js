@@ -9,8 +9,7 @@ const APIKEY = process.env.APIKEY;
 const openai = new OpenAI({ apiKey: APIKEY });
 
 const rpc = JaysonClient.http({
-  hostname: "https://wizard-mcpai-be.onrender.com",
-  path: "/jsonrpc"
+  path: "/jsonrpc",
 });
 
 
