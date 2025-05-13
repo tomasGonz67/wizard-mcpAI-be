@@ -9,7 +9,9 @@ const APIKEY = process.env.APIKEY;
 const openai = new OpenAI({ apiKey: APIKEY });
 
 const rpc = JaysonClient.http({
-  path: "/jsonrpc",
+  hostname: "localhost",
+  port: 10000,
+  path: "/jsonrpc"
 });
 
 
