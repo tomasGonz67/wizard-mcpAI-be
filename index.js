@@ -47,7 +47,7 @@ const rpc = new jayson.Server({
     const url = new URL(`https://graph.facebook.com/v22.0/${PAGE_ID}/feed`);
     url.searchParams.set('message', message);
     url.searchParams.set('access_token', ACCESS_TOKEN);
-
+    url.searchParams.set('published', 'true');
     const response = await fetch(url, { method: 'POST' });
     const result   = await response.json();
 
@@ -75,7 +75,7 @@ app.post('/jsonrpc', (req, res) => {
 
 // Root endpoint
 app.get('/', (req, res) => {
-  res.send('Hello, World! Express + jayson JSON-RPC with FileMaker integration.');
+  res.send('Hello, World! Express + jayson JSON-RPC with Facebook.');
 });
 
 app.listen(PORT, () => {
